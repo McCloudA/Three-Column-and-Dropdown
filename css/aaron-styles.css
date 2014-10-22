@@ -1,0 +1,48 @@
+/* Aaron's Custom Styles */
+
+#heading {
+  text-align: center;
+  background-color: #ffd69d;
+}
+
+#nav {
+  text-align: center;
+  background-color: #97ffd1;
+}
+
+#main-body {
+  clear: both;
+  padding: 10px;
+}
+
+#left { 
+  float: left; 
+  width: 180px;
+  background-color: #eeeeee;
+  margin: 0 10px 10px 10px;
+  padding: 0 7px;
+  min-height: auto;
+}
+
+#right { 
+  float: right; 
+  width: 200px; 
+  background-color: #D8D6FF;
+  margin: 0 10px 10px 10px;
+  padding: 0 7px;
+  min-height: auto;
+}
+
+#center {
+  background-color: #FFFFFF;
+}
+
+div#center > h1 {
+  text-align: center;
+}
+
+#footer {
+  clear: both;
+  background-color: #fffbb1;
+  padding: 5px 5px 5px 17px;
+}
