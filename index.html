@@ -25,14 +25,21 @@
         <h1>Heading</h1>
       </div>
       <div id="nav">
-        <div id="dropdown">
+        <div id="dropdown" onmouseleave="up('.firstTier'), up('.secondTier')">
           <ul>
-            <li onmouseenter="down('.firstTier')" onmouseleave="up('.firstTier')">Dropdown Nav</li>
-            <li class="firstTier">Cat Option #1</li>
-            <li class="firstTier">Cat Option #2</li>
-            <li class="firstTier">Cat Option #3</li>
-            <li class="firstTier">Cat Option #4</li>
-            <li class="firstTier">Cat Option #5</li>
+            <li onmouseenter="down('.firstTier')">Dropdown Nav</li>
+            <li class="firstTier" onmouseenter="down('.secondTier', '-90px', '160px')">Cat Option #1</li>
+            <li class="firstTier" onmouseenter="down('.secondTier', '-72px', '160px')">Cat Option #2</li>
+            <li class="firstTier" onmouseenter="down('.secondTier', '-54px', '160px')">Cat Option #3</li>
+            <li class="firstTier" onmouseenter="down('.secondTier', '-36px', '160px')">Cat Option #4</li>
+            <li class="firstTier" onmouseenter="down('.secondTier', '-18px', '160px')">Cat Option #5</li>
+          </ul>
+          <ul onmouseleave="up('.secondTier')">
+            <li class="secondTier">Kitten Option #1</li>
+            <li class="secondTier">Kitten Option #2</li>
+            <li class="secondTier">Kitten Option #3</li>
+            <li class="secondTier">Kitten Option #4</li>
+            <li class="secondTier">Kitten Option #5</li>
           </ul>
         </div>
         <!-- <ul>

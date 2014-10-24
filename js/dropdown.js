@@ -13,10 +13,18 @@ Element to slide gets the following CSS:
  * @param  {Node} elem Element to show and hide
  */
 
-function down(a) {
+function down(a, b, c) {
   var x = document.querySelectorAll(a);
-  for (var i = x.length - 1; i >= 0; i--) {
-    x[i].style.maxHeight = '1000px';
+  if (b === undefined || c === undefined) {
+    for (var i = x.length - 1; i >= 0; i--) {
+      x[i].style.maxHeight = '1000px';
+    };
+  } else {
+    for (var i = x.length - 1; i >= 0; i--) {
+      x[i].style.maxHeight = '1000px';
+      x[i].style.top = b;
+      x[i].style.left = c;
+    };
   };
 };
 
