@@ -54,7 +54,6 @@ div#center > h1 {
 div#dropdown {
   position: relative;
   z-index: 100;
-
   width: 160px;
   margin-left: auto;
   margin-right: auto;
@@ -72,33 +71,28 @@ div#dropdown > ul:first-child {
   background-color: #b0e0e6;
 }
 
-div#dropdown > ul:first-child:hover {
-  background-color: #;
-}
-
+#navHeader:hover,
 li.firstTier:hover {
-  background-color: #;
+  background-color: #C0F4FA;
 }
 
-li.firstTier {
-  background-color: #b0e0e6;
-
-  /* Hidden to-be-revealed styles */
+li.firstTier,
+li.secondTier {
   max-height: 0;
   opacity: 1;
   overflow: hidden;
   transition: max-height 0.7s ease 0s;
+}
+
+li.firstTier {
+  background-color: #b0e0e6;
 }
 
 li.secondTier {
   background-color: #60fffa;
   position: relative;
-  /*top: 100px;
-  left: 100px;*/
+}
 
-  /* Hidden to-be-revealed styles */
-  max-height: 0;
-  opacity: 1;
-  overflow: hidden;
-  transition: max-height 0.7s ease 0s;
+li.secondTier:hover {
+  background-color: #25E8E2;
 }

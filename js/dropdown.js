@@ -1,17 +1,3 @@
-// https://gist.github.com/ludder/4226288
-
-/*
-Element to slide gets the following CSS:
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease 0s;
-*/
- 
-/**
- * Like jQuery's slideDown function - uses CSS3 transitions
- * @param  {Node} elem Element to show and hide
- */
 
 function down(a, b, c) {
   var x = document.querySelectorAll(a);
@@ -37,19 +23,3 @@ function up(a) {
 
 
  
-/**
- * Call once after timeout
- * @param  {Number}   seconds  Number of seconds to wait
- * @param  {Function} callback Callback function
- */
-function once (seconds, callback) {
-  var counter = 0;
-  var time = window.setInterval( function () {
-    counter++;
-    if ( counter >= seconds ) {
-      callback();
-      window.clearInterval( time );
-    }
-  }, 400 );
-}
-
