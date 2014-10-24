@@ -14,7 +14,6 @@
 
         <link rel="stylesheet" href="./css/normalize.css">
         <link rel="stylesheet" href="./css/aaron-styles.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
 
@@ -26,8 +25,37 @@
         <h1>Heading</h1>
       </div>
       <div id="nav">
-        <h2>Nav Bar</h2>
-        <p>Option 1 | Option 2 | Option 3 | Option 4</p>
+        <div id="dropdown">
+          <ul>
+            <li onmouseenter="down('.firstTier')" onmouseleave="up('.firstTier')">Dropdown Nav</li>
+            <li class="firstTier">Cat Option #1</li>
+            <li class="firstTier">Cat Option #2</li>
+            <li class="firstTier">Cat Option #3</li>
+            <li class="firstTier">Cat Option #4</li>
+            <li class="firstTier">Cat Option #5</li>
+          </ul>
+        </div>
+        <!-- <ul>
+          <li  onmouseenter="slideDown('cats')" onmouseleave="slideUp('cats')">Dropdown Nav</li>
+          <li>
+            <ul class="second_tier" id="cats">
+              <li onmouseenter="slideDown('kitten')" onmouseleave="slideUp('kitten')"> Cat Option 1 </li>
+              <li onmouseenter="slideDown('kitten')" onmouseleave="slideUp('kitten')"> Cat Option 2 </li>
+              <li onmouseenter="slideDown('kitten')" onmouseleave="slideUp('kitten')"> Cat Option 3 </li>
+              <li onmouseenter="slideDown('kitten')" onmouseleave="slideUp('kitten')"> Cat Option 4 </li>
+              <li onmouseenter="slideDown('kitten')" onmouseleave="slideUp('kitten')"> Cat Option 5 </li>
+              <li>
+                <ul class="third_tier" id="kitten">
+                  <li>Kitten 1</li>
+                  <li>Kitten 2</li>
+                  <li>Kitten 3</li>
+                  <li>Kitten 4</li>
+                  <li>Kitten 5</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul> -->
       </div>
       <div id="main-body">
         <div id="left">
@@ -35,12 +63,7 @@
             Left Div
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
         <div id="right">
@@ -67,6 +90,6 @@
           <h1>Footer</h1>
           <p>Yet more example text...</p>
         </div>
-
+    <script type="text/javascript" src="./js/dropdown.js"></script>
     </body>
 </html>

@@ -5,11 +5,6 @@
   background-color: #ffd69d;
 }
 
-#nav {
-  text-align: center;
-  background-color: #97ffd1;
-}
-
 #main-body {
   clear: both;
   padding: 10px 10px 20px 10px;
@@ -46,4 +41,38 @@ div#center > h1 {
   clear: both;
   background-color: #fffbb1;
   padding: 5px 5px 5px 17px;
+}
+
+/*********************** Nav Styles 
+*********************************************/
+
+#nav {
+  background-color: #97ffd1;
+  height: 70px;
+}
+
+div#dropdown {
+  position: relative;
+  z-index: 100;
+
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3px 0;
+  background-color: #b0e0e6;
+}
+
+#dropdown > ul {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+li.firstTier {
+  /* Hidden to-be-revealed styles */
+  max-height: 0;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.7s ease 0s;
 }
