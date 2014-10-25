@@ -1,16 +1,10 @@
 
 function down(a, b, c) {
   var x = document.querySelectorAll(a);
-  if (b === undefined || c === undefined) {
-    for (var i = x.length - 1; i >= 0; i--) {
-      x[i].style.maxHeight = '1000px';
-    };
-  } else {
-    for (var i = x.length - 1; i >= 0; i--) {
-      x[i].style.maxHeight = '1000px';
-      x[i].style.top = b;
-      x[i].style.left = c;
-    };
+  for (var i = x.length - 1; i >= 0; i--) {
+    x[i].style.maxHeight = '1000px';
+    x[i].style.top = b;
+    x[i].style.left = c;
   };
 };
 
