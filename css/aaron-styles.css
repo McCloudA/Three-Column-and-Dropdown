@@ -81,16 +81,17 @@ li.secondTier {
   max-height: 0;
   opacity: 1;
   overflow: hidden;
-  transition: max-height 0.7s ease 0s;
 }
 
 li.firstTier {
   background-color: #b0e0e6;
+  transition: max-height 0.7s ease 0s;
 }
 
 li.secondTier {
   background-color: #60fffa;
   position: relative;
+  transition: max-height 0.0s ease 0s;
 }
 
 li.secondTier:hover {

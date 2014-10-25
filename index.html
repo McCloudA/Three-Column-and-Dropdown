@@ -12,7 +12,13 @@
         <link rel="stylesheet" href="./css/normalize.css">
         <link rel="stylesheet" href="./css/aaron-styles.css">
     </head>
-    <body>
+    <body onload="listGen('A', kittens, 'kittenList'), 
+    listGen('B', puppies, 'puppieList'),
+    listGen('C', birds, 'birdList'),
+    listGen('D', fish, 'fishList'),
+    listGen('E', dino, 'dinoList')
+    ">
+
 
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -22,22 +28,20 @@
         <h1>Heading</h1>
       </div>
       <div id="nav">
-        <div id="dropdown" onmouseleave="up('.firstTier'), up('.secondTier')">
+        <div id="dropdown" onmouseleave="up('.firstTier'), up('.secondTier.A.B.C.D.E')">
           <ul>
             <li id="navHeader" onmouseenter="down('.firstTier')">Dropdown Nav</li>
-            <li class="firstTier" onmouseenter="down('.secondTier', '-90px', '160px')">Cat Option #1</li>
-            <li class="firstTier" onmouseenter="down('.secondTier', '-72px', '160px')">Cat Option #2</li>
-            <li class="firstTier" onmouseenter="down('.secondTier', '-54px', '160px')">Cat Option #3</li>
-            <li class="firstTier" onmouseenter="down('.secondTier', '-36px', '160px')">Cat Option #4</li>
-            <li class="firstTier" onmouseenter="down('.secondTier', '-18px', '160px')">Cat Option #5</li>
+            <li class="firstTier" onmouseenter="down('.secondTier.A', '-90px', '160px')" onmouseleave="up('.secondTier.A')">Cat Option #1</li>
+            <li class="firstTier" onmouseenter="down('.secondTier.B', '-72px', '160px')" onmouseleave="up('.secondTier.B')">Cat Option #2</li>
+            <li class="firstTier" onmouseenter="down('.secondTier.C', '-54px', '160px')" onmouseleave="up('.secondTier.C')">Cat Option #3</li>
+            <li class="firstTier" onmouseenter="down('.secondTier.D', '-36px', '160px')" onmouseleave="up('.secondTier.D')">Cat Option #4</li>
+            <li class="firstTier" onmouseenter="down('.secondTier.E', '-18px', '160px')" onmouseleave="up('.secondTier.E')">Cat Option #5</li>
           </ul>
-          <ul onmouseleave="up('.secondTier')">
-            <li class="secondTier">Kitten Option #1</li>
-            <li class="secondTier">Kitten Option #2</li>
-            <li class="secondTier">Kitten Option #3</li>
-            <li class="secondTier">Kitten Option #4</li>
-            <li class="secondTier">Kitten Option #5</li>
-          </ul>
+          <ul onmouseenter="down('.secondTier.A', '-90px', '160px')" onmouseleave="up('.secondTier.A')" id="kittenList"></ul>
+          <ul onmouseenter="down('.secondTier.B', '-72px', '160px')" onmouseleave="up('.secondTier.B')" id="puppieList"></ul>
+          <ul onmouseenter="down('.secondTier.C', '-54px', '160px')" onmouseleave="up('.secondTier.C')" id="birdList"></ul>
+          <ul onmouseenter="down('.secondTier.D', '-36px', '160px')" onmouseleave="up('.secondTier.D')" id="fishList"></ul>
+          <ul onmouseenter="down('.secondTier.E', '-18px', '160px')" onmouseleave="up('.secondTier.E')" id="dinoList"></ul>
         </div>
       </div>
       <div id="main-body">
