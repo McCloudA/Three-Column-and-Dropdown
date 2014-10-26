@@ -1,4 +1,6 @@
 // Dropdown Animations
+// ***********************************
+
 
 function up(a) {
   var listClasses = document.querySelectorAll(a);
@@ -26,7 +28,10 @@ function down(elementInfo, topPosition, leftPosition) {
   };
 };
 
+
 // Second Tier Dropdown List Generator
+// ***********************************
+
 
 var kittens  = ["Kitten Option #1", "Kitten Option #2", "Kitten Option #3", "Kitten Option #4", "Kitten Option #5"];
 var puppies  = ["pug", "boxer", "golden retriever", "doberman", "hound of the baskervilles"];
@@ -34,7 +39,7 @@ var birds    = ["golden eagle", "thrush", "bird of paradise", "parakeet", "raven
 var fish     = ["mahi-mahi", "saba", "sake", "Albacore", "Blue-fin"];
 var dino = ["ankylosaurus", "T-rex", "protoceratops", "quetzalcoatlus", "velociraptor"];
 
-function listGen(array, elementId) {
+function listGenSecondTier(array, elementId) {
   list = "";
   var i;
   for (i = 0; i < array.length; i++) {
@@ -42,3 +47,42 @@ function listGen(array, elementId) {
   };
   document.getElementById(elementId).innerHTML = list;
 };
+
+
+// 1st Tier Dropdown List Generator
+// ***********************************
+
+function listGenFirstTier(validation_messages) {
+  for (var key in validation_messages) {
+    var obj = validation_messages[key];
+      document.getElementById("firstTierNavList").innerHTML += "<li class=\"firstTier\" onmouseenter=\"down('" + obj.list_id + "', '" + obj.vertical_offset + "', '160px')\" onmouseleave=\"up('.secondTier')\">" + obj.list_title + "</li>";
+  };
+};
+
+var validation_messages = {
+  "key_1": {
+    "list_id": "kittenList",
+    "vertical_offset": "-90px",
+    "list_title": "Kittens"
+  },
+  "key_2": {
+    "list_id": "puppieList",
+    "vertical_offset": "-72px",
+    "list_title": "Puppies"
+  },
+  "key_3": {
+    "list_id": "birdList",
+    "vertical_offset": "-54px",
+    "list_title": "Birds"
+  },
+  "key_4": {
+    "list_id": "fishList",
+    "vertical_offset": "-36px",
+    "list_title": "Fish"
+  },
+  "key_5": {
+    "list_id": "dinoList",
+    "vertical_offset": "-18px",
+    "list_title": "Dinosaurs"
+  }
+}
