@@ -52,14 +52,14 @@ function listGenSecondTier(array, elementId) {
 // 1st Tier Dropdown List Generator
 // ***********************************
 
-function listGenFirstTier(validation_messages) {
-  for (var key in validation_messages) {
-    var obj = validation_messages[key];
+function listGenFirstTier(first_tier_array) {
+  for (var key in first_tier_array) {
+    var obj = first_tier_array[key];
       document.getElementById("firstTierNavList").innerHTML += "<li class=\"firstTier\" onmouseenter=\"down('" + obj.list_id + "', '" + obj.vertical_offset + "', '160px')\" onmouseleave=\"up('.secondTier')\">" + obj.list_title + "</li>";
   };
 };
 
-var validation_messages = {
+var first_dropdown = {
   "key_1": {
     "list_id": "kittenList",
     "vertical_offset": "-90px",
@@ -85,4 +85,4 @@ var validation_messages = {
     "vertical_offset": "-18px",
     "list_title": "Dinosaurs"
   }
-}
+};
